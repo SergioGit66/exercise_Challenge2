@@ -7,9 +7,10 @@ export default function DarkModeContextProvider ({children}){
 const [darkMode, setDarkMode] = useState(null);
 
 return(
-
+    <div className={darkMode}>
     <DarkModeContext.Provider value = {{darkMode, setDarkMode}}>
         {children}
     </DarkModeContext.Provider>
+    </div>
 )
 }
